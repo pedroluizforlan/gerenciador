@@ -16,5 +16,6 @@ const criarGasto = async (req, res) => {
     }
 };
 
+
 module.exports = { criarGasto };
 
