@@ -19,6 +19,9 @@
                       inputStyleClass="w-full p-3 md:w-30rem" [(ngModel)]="senha" name="senha"></p-password>
 
           <button pButton pRipple label="Sign In" class="w-full p-3 text-xl" (click)="login()"></button>
+          <div class="p-error text-center mt-3" *ngIf="mensagemErro">
+            {{ mensagemErro }}
+          </div>
         </div>
       </div>
     </div>

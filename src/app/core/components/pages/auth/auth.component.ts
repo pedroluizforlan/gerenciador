@@ -6,6 +6,7 @@ import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
 import {AuthService} from "../../../../services/auth.service";
 import {Router} from "@angular/router";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-auth',
@@ -15,7 +16,8 @@ import {Router} from "@angular/router";
     FormsModule,
     PasswordModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    NgIf
   ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss'
@@ -23,6 +25,7 @@ import {Router} from "@angular/router";
 export class AuthComponent {
   email: string = '';
   senha: string = '';
+  mensagemErro: string = ''; // Armazena a mensagem de erro
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -38,7 +41,13 @@ export class AuthComponent {
 
       },
       (error) => {
-        console.log("erro:", error)
+        if (error.status === 401) {
+          this.mensagemErro = 'Senha incorreta. Por favor, tente novamente.';
+        } else if (error.status === 404) {
+          this.mensagemErro = 'Usuário não encontrado.';
+        } else {
+          this.mensagemErro = 'Erro ao tentar fazer login. Tente novamente mais tarde.';
+        }
       }
     );
   }

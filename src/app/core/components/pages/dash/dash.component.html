@@ -1,25 +1,27 @@
 <div class="grid p-fluid">
   <div class="col-12 lg:col-6">
     <div class="card">
-      <h5>Total de Gasto x Mês</h5>
+      <h1>Seus gastos mensais</h1>
       <p-chart type="line" [data]="totalGastoLineData" [options]="lineOptions"></p-chart>
     </div>
   </div>
   <div class="col-12 lg:col-6">
     <div class="card">
-      <h5>Saldo x Mês</h5>
+      <h1>Seu saldo nos ultimos 12 meses</h1>
+      <h6>* É nescessário cadastrar seus ultimos 12 meses</h6>
       <p-chart type="line" [data]="saldoLineData" [options]="lineOptions"></p-chart>
     </div>
   </div>
   <div class="col-12 lg:col-6">
     <div class="card">
-      <h5>Gasto e Saldo por Mês</h5>
+      <h1>Comparação de saldo e gastos</h1>
+      <h6>* É nescessário cadastrar seus ultimos 12 meses</h6>
       <p-chart type="bar" [data]="gastoSaldoBarData" [options]="barOptions"></p-chart>
     </div>
   </div>
   <div class="col-12 lg:col-6">
     <div class="card">
-      <h5>Contagem por Categoria</h5>
+      <h1>Categorias</h1>
       <p-chart type="pie" [data]="categoriasPieData" [options]="pieOptions"></p-chart>
     </div>
   </div>

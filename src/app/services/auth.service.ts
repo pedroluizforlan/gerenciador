@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://backfintrack.vercel.app/api';  // A URL da sua API
+  private apiUrl = 'https://backfintrack.vercel.app/api';
 
   constructor(private http: HttpClient) {}
 
