@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SaldoService {
-  private apiUrl = 'http://localhost:5000/api/saldos'; // URL da API
+  private apiUrl = 'https://backfintrack.vercel.app/api/saldos'; // URL da API
 
   constructor(private http: HttpClient) {}
 

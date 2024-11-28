@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 export class DashService {
 
 
-  private readonly API_URL = 'http://localhost:5000/api';
+  private readonly API_URL = 'https://backfintrack.vercel.app/api';
 
   constructor(private http: HttpClient) {}
 

@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 })
 export class GastoService {
 
-  private apiUrl = 'http://localhost:5000/api/gastos';
+  private apiUrl = 'https://backfintrack.vercel.app/api/gastos';
 
   constructor(private http: HttpClient) { }
 

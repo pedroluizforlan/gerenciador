@@ -6,7 +6,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiUrl = 'http://localhost:5000/api/usuarios';  // URL do seu backend
+  private apiUrl = 'https://backfintrack.vercel.app/api/usuarios';  // URL do seu backend
 
   constructor(private http: HttpClient) {}
 
