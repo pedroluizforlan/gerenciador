@@ -1,0 +1,26 @@
+<div class="grid p-fluid">
+  <div class="col-12 lg:col-6">
+    <div class="card">
+      <h5>Total de Gasto x Mês</h5>
+      <p-chart type="line" [data]="totalGastoLineData" [options]="lineOptions"></p-chart>
+    </div>
+  </div>
+  <div class="col-12 lg:col-6">
+    <div class="card">
+      <h5>Saldo x Mês</h5>
+      <p-chart type="line" [data]="saldoLineData" [options]="lineOptions"></p-chart>
+    </div>
+  </div>
+  <div class="col-12 lg:col-6">
+    <div class="card">
+      <h5>Gasto e Saldo por Mês</h5>
+      <p-chart type="bar" [data]="gastoSaldoBarData" [options]="barOptions"></p-chart>
+    </div>
+  </div>
+  <div class="col-12 lg:col-6">
+    <div class="card">
+      <h5>Contagem por Categoria</h5>
+      <p-chart type="pie" [data]="categoriasPieData" [options]="pieOptions"></p-chart>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,7 @@ const autenticarUsuario = (req, res, next) => {
     const token = req.header('Authorization')?.replace('Bearer ', '');
 
     if (!token) {
+        console.log(token)
         return res.status(401).json({ message: 'Acesso negado.' });
     }
 

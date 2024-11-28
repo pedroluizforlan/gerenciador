@@ -1,1 +1,86 @@
-<p>gerenciador works!</p>
+<div class="card p-fluid">
+  <h5>Adicionar Gasto</h5>
+  <div class="p-formgrid grid">
+    <!-- Campo Valor -->
+    <div class="field col">
+      <label htmlFor="titulo">Título</label>
+      <input
+        pInputText
+        id="titulo"
+        type="text"
+        [(ngModel)]="gasto.titulo"
+        placeholder="Digite o título do gasto"
+      />
+    </div>
+
+    <!-- Campo Valor -->
+    <div class="field col">
+      <label htmlFor="valor">Valor</label>
+      <input
+        pInputText
+        id="valor"
+        type="number"
+        [(ngModel)]="gasto.valor"
+        placeholder="Digite o valor do gasto"
+      />
+    </div>
+
+    <!-- Campo Data -->
+    <div class="field col">
+      <label htmlFor="data">Data</label>
+      <p-calendar
+        [(ngModel)]="gasto.data"
+        dateFormat="dd/mm/yy"
+        showIcon="true"
+        id="data"
+      ></p-calendar>
+    </div>
+
+    <!-- Campo Categoria -->
+    <div class="field col">
+      <label htmlFor="categoria">Categoria</label>
+      <input
+        pInputText
+        id="categoria"
+        type="text"
+        [(ngModel)]="gasto.categoria"
+        placeholder="Digite a categoria"
+      />
+    </div>
+  </div>
+
+  <!-- Botão Salvar -->
+  <div class="flex flex-wrap gap-2">
+    <button
+      pButton
+      pRipple
+      label="Salvar"
+      (click)="salvarGasto()"
+      class="p-button-success"
+    ></button>
+  </div>
+</div>
+
+<!-- Tabela de Gastos -->
+<div class="card p-fluid">
+  <p-table [value]="gastos" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>Titulo</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th>Categoria</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-gasto>
+      <tr>
+        <td>{{ gasto._id }}</td>
+        <td>{{ gasto.titulo}}</td>
+        <td>{{ gasto.valor | currency:'BRL' }}</td>
+        <td>{{ gasto.data | date:'dd/MM/yyyy' }}</td>
+        <td>{{ gasto.categoria }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
