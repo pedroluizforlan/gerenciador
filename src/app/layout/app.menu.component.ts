@@ -31,7 +31,7 @@ export class AppMenuComponent implements OnInit {
                 label: 'Documentação',
                 items: [
                     {
-                        label: 'Documentation', icon: 'pi pi-fw pi-file', routerLink: ['/documentation']
+                        label: 'Documentation', icon: 'pi pi-fw pi-file', url: ['https://gusty-hiss-dc9.notion.site/FinTrack-14d99493f780803ea819e1436d655df7'], target: '_blank'
                     },
                     {
                         label: 'Github', icon: 'pi pi-fw pi-github', url: ['https://github.com/pedroluizforlan/gerenciador'], target: '_blank'
